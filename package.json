@@ -1,0 +1,13 @@
+{
+  "name": "luna-dpi",
+  "main": "./lib/luna-dpi",
+  "version": "0.1.0",
+  "description": "GUI scaling toolkit.",
+  "keywords": [
+  ],
+  "repository": "https://github.com/atom/luna-dpi",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
