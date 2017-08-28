@@ -64,8 +64,8 @@ patchCorePanel = (el) ->
   controls.className = 'controls'
   controls.innerHTML = '
   <label class="control-label">
-    <div class="setting-title">GUI Zoom</div>
-    <div class="setting-description">Zoom factor used to scale the interface.</div>
+    <div class="setting-title">UI Zoom</div>
+    <div class="setting-description">User interface zoom factor (value of 1.0 means that no scaling occurs).</div>
   </label>'
   controls.appendChild @zoomSlider.domRef
   zoomCtrl.appendChild controls
