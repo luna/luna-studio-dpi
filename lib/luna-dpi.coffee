@@ -1,4 +1,3 @@
-SettingsView = require 'settings-view'
 LunaDpiView  = require './luna-dpi-view'
 WebFrame = require('electron').webFrame
 
