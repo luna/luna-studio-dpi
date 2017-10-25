@@ -1,24 +1,20 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
 
-'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'Luna DPI'
-      'submenu': [
-        {
-          'label': 'Toggle'
-          'command': 'luna-dpi:toggle'
-        },
-        {
-          'label': 'Zoom in'
-          'command': 'luna-dpi:toggle'
-        },
-        {
-          'label': 'Zoom out'
-          'command': 'luna-dpi:toggle'
-        }
-      ]
-    ]
-  }
-]
+# 'menu': [
+#   {
+#     'label': 'Packages'
+#     'submenu': [
+#       'label': 'Luna DPI'
+#       'submenu': [
+#         {
+#           'label': 'Zoom in'
+#           'command': 'luna-dpi:zoom-in'
+#         },
+#         {
+#           'label': 'Zoom out'
+#           'command': 'luna-dpi:zoom-out'
+#         }
+#       ]
+#     ]
+#   }
+# ]

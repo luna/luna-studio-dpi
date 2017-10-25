@@ -1,4 +1,3 @@
-LunaDpiView  = require './luna-dpi-view'
 WebFrame = require('electron').webFrame
 
 {CompositeDisposable} = require 'atom'
@@ -82,13 +81,8 @@ patchPanel = (sv, name, patch) ->
       th
 
 module.exports = LunaDpi =
-  lunaDpiView   : null
-  modalPanel    : null
-  subscriptions : null
 
   setZoom: (val) ->
-    console.log "!"
-    console.log @
     @zoom = val
     WebFrame.setZoomFactor val
 
@@ -105,9 +99,6 @@ module.exports = LunaDpi =
       @setZoom val
       @zoomSlider.setVal val
 
-    # Subscriptions
-    @subscriptions = new CompositeDisposable
-    @subscriptions.add atom.commands.add 'atom-workspace', 'luna-dpi:toggle': => @toggle()
 
     patchSettingsViewInit = (sv) ->
       svInitializePanels = sv.initializePanels
@@ -134,24 +125,10 @@ module.exports = LunaDpi =
         patchSettingsViewInit sv
         sv
 
-    @lunaDpiView = new LunaDpiView(state.lunaDpiViewState)
-    @modalPanel = atom.workspace.addModalPanel(item: @lunaDpiView.getElement(), visible: false)
 
   deactivate: ->
-    @modalPanel.destroy()
-    @subscriptions.dispose()
-    @lunaDpiView.destroy()
 
   serialize: ->
-    lunaDpiViewState: @lunaDpiView.serialize()
-
-  toggle: ->
-    console.log 'LunaDpi was toggled!'
-
-    if @modalPanel.isVisible()
-      @modalPanel.hide()
-    else
-      @modalPanel.show()
 
   config:
     zoom:
